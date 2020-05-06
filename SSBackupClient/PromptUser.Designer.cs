@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PromptUser));
             this.OK = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
             this.Message = new System.Windows.Forms.Label();
@@ -88,6 +89,7 @@
             this.Controls.Add(this.Message);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.OK);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PromptUser";

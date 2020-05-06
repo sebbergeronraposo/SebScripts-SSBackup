@@ -37,7 +37,7 @@ namespace SSBackupClient
             for (int i = 0; i < words.Length; i++)
             {
                 if (i == words.Length) break; 
-                if ((i+1) % 5 == 0)
+                if ((i+1) % 4 == 0)
                 {
                     words[i] = words[i] + "\r\n";
                     continue; 

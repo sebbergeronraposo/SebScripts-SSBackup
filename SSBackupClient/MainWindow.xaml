@@ -212,7 +212,7 @@
             <ComboBoxItem Content="24h" FontSize="12"></ComboBoxItem>
         </ComboBox>
         <TextBox x:Name="ServiceStatus" Text="Service status:" Grid.Column="1" Margin="16,70,350,0" Grid.Row="3" TextWrapping="Wrap" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFFAF8F8"/>
-        <Ellipse x:Name="ServiceStatusDisplay" Grid.Column="1" Fill="#FFF4F4F5" Margin="95,73,470,14" Grid.Row="3" Stroke="Black"/>
+        <Ellipse x:Name="ServiceStatusDisplay" Grid.Column="1" Fill="#FFF4F4F5" Margin="95,73,470,14" Grid.Row="3" Stroke="Black" Height="15" VerticalAlignment="Top"/>
         <TextBox x:Name="ServiceLastBackupTime"  Grid.Column="1" Margin="141,70,150,15" Grid.Row="3" TextWrapping="Wrap" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFFAF8F8"/>
 
     </Grid>

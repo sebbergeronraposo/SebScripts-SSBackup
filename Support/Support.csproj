@@ -12,4 +12,8 @@
     <PlatformTarget></PlatformTarget>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>C:\Users\sraposo\source\repos\SSBackup\bin\Release</OutputPath>
+  </PropertyGroup>
+
 </Project>

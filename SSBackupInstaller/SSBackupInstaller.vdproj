@@ -63,6 +63,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_CDD7464F43FC4F12A7FB096D57755B92"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E9D7085B16872CCF5E81C8857062E616"
         "OwnerKey" = "8:_1F6405CAAC4A449CA375617778CD644E"
         "MsmSig" = "8:_UNDEFINED"
@@ -192,10 +198,10 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5.2"
                     {
-                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    "Name" = "8:Microsoft .NET Framework 4.5.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5.2"
                     }
                 }
             }
@@ -417,6 +423,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CDD7464F43FC4F12A7FB096D57755B92"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\Desktop\\Logo.png"
+            "TargetName" = "8:Logo.png"
+            "Tag" = "8:"
+            "Folder" = "8:_F8E0D3681BFA4ED79467819A352D227D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E9D7085B16872CCF5E81C8857062E616"
             {
             "AssemblyRegister" = "3:1"
@@ -507,7 +533,7 @@
                 {
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_48C16A2124C04D7EA0F7197A4CB85264"
                     {
-                    "Name" = "8:SebsScript"
+                    "Name" = "8:SebScripts"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
@@ -547,7 +573,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SSBackup"
         "ProductCode" = "8:{28B51A08-C02D-4103-B04D-902981F01514}"
-        "PackageCode" = "8:{A58DF1D2-06D8-439C-8968-41E27095B612}"
+        "PackageCode" = "8:{1652064E-DE83-4FDB-8CB6-FA56060997DD}"
         "UpgradeCode" = "8:{5FE6793B-3FE5-4962-9862-9136D3D49011}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -555,14 +581,14 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:SebsScript"
+        "Manufacturer" = "8:SebScripts"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:SSBackupInstaller"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Sebastien Bergeron Raposo"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:"
+        "ARPCOMMENTS" = "8:This is the installer for SSBackup open source application from SebScripts"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:_2C8318D41A8243A3AF33DE886CD4E300"
         "ARPIconIndex" = "3:0"
@@ -669,7 +695,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0982EAF714124FB083EDB7FD29A4C964"
             {
-            "Name" = "8:Shortcut to Primary output from SebsBackupClient (Active)"
+            "Name" = "8:SSBackupClient"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -683,7 +709,7 @@
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6E4EA5324D9142FA91BF5533337D4F18"
             {
-            "Name" = "8:Shortcut to Primary output from SebsBackupClient (Active)"
+            "Name" = "8:SSBackupClient"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -919,7 +945,8 @@
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
-                            "Setting" = "3:1"
+                            "Setting" = "3:2"
+                            "Value" = "8:_CDD7464F43FC4F12A7FB096D57755B92"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "CopyrightWarning"
@@ -930,8 +957,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1202"
+                            "Setting" = "3:2"
+                            "Value" = "8:This is open source software. It is forbidden to share this installer, though the source code can be found on GitHub and can be shared. "
                             "DefaultValue" = "8:#1202"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -943,8 +970,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1203"
+                            "Setting" = "3:2"
+                            "Value" = "8:The installer will guide you through the steps required to install SSBackup on your computer."
                             "DefaultValue" = "8:#1203"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -1069,8 +1096,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1202"
+                            "Setting" = "3:2"
+                            "Value" = "8:This is open source software. It is forbidden to share this installer, though the source code can be found on GitHub and can be shared. "
                             "DefaultValue" = "8:#1202"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -1082,8 +1109,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1203"
+                            "Setting" = "3:2"
+                            "Value" = "8:The installer will guide you through the steps required to install SSBackup on your computer."
                             "DefaultValue" = "8:#1203"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -1171,7 +1198,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_1F6405CAAC4A449CA375617778CD644E"
             {
-            "SourcePath" = "8:..\\SSBackup\\obj\\Debug\\SSBackup.exe"
+            "SourcePath" = "8:..\\SSBackup\\obj\\Release\\SSBackup.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_F8E0D3681BFA4ED79467819A352D227D"
@@ -1255,7 +1282,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_EAADC19FA2B74C53A25C52DC4815921B"
             {
-            "SourcePath" = "8:..\\SSBackupClient\\obj\\Debug\\SSBackupClient.exe"
+            "SourcePath" = "8:..\\SSBackupClient\\obj\\Release\\SSBackupClient.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_F8E0D3681BFA4ED79467819A352D227D"

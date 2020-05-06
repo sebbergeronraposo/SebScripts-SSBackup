@@ -52,7 +52,7 @@ namespace SebsBackupClient
             InitializeComponent();
             InitializaeUIObjects();
             Items = new List<String>();
-            this.Width = (System.Windows.SystemParameters.PrimaryScreenWidth * 0.45);
+            this.Width = 691.2;
             try
             {
                 myCopyer = new Copyer(ApplicationType.Client);
@@ -300,16 +300,16 @@ namespace SebsBackupClient
         {
             UIGrid.RowDefinitions[sourceNumber+2].Height = new GridLength(5, GridUnitType.Star);
             UIGrid.RowDefinitions[sourceNumber + 3].Height = new GridLength(0);
-            this.Height = (System.Windows.SystemParameters.PrimaryScreenHeight * screenSize);           
+            this.Height = (865 * screenSize);           
             CenterWindowOnScreen();
         }
         private void CenterWindowOnScreen()
         {
             //Need to find which monitor we are on 
             double screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
-            double screenHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
+            double screenHeight = System.Windows.SystemParameters.PrimaryScreenHeight; 
             double windowWidth = this.Width;
-            double windowHeight = this.Height;
+            double windowHeight = this.Height; 
             this.Left = (screenWidth / 2) - (windowWidth / 2);
             this.Top = (screenHeight / 2) - (windowHeight / 2);
         }
@@ -611,7 +611,7 @@ namespace SebsBackupClient
             }
             catch (Exception Ex)
             {
-                throw; 
+                throw Ex; 
             }
             
         }
@@ -641,6 +641,30 @@ namespace SebsBackupClient
                 {
                     PromptUser("Unable to determine destination properties, Exception is:" + Ex.Message, Ex.StackTrace, Severity.Warning); 
                     return;
+                }
+                try
+                {
+                    foreach (KeyValuePair<string, List<Object>> entry in sourceUIObjects)
+                    {
+                        if(((System.Windows.Controls.TextBox)entry.Value[0]).Text != string.Empty)
+                        {
+                            string incrementalSize = GetValueAndUnitsFromDict(myCopyer.CalculateSizeDifference(((TextBox)entry.Value[0]).Text, Destination.Text));
+                            ((System.Windows.Controls.TextBox)entry.Value[6]).Text = @"Required disk space for incremental backup: " + incrementalSize;
+                            if (incrementalSize == "0.00Bytes")
+                            {
+                                SetGreen((System.Windows.Controls.Button)entry.Value[8]);
+                            }
+                            else
+                            {
+                                SetRed((System.Windows.Controls.Button)entry.Value[8]);
+                            }
+                        }
+                    }
+
+                }
+                catch (Exception Ex)
+                {
+                    PromptUser("Unable to calculate required disk space for source. Exception is: " + Ex.Message, Ex.StackTrace, Severity.Warning);
                 }
 
                 return; 
