@@ -26,7 +26,7 @@ namespace SebsBackup
         private readonly Logger serviceLogger; 
         private static readonly string _folderPath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
         private static readonly string _configurationPath = _folderPath + @"\configuration.bin";
-        private int frequency;
+        private int frequency = 1;
         private readonly List<String> sources = new List<string>();
         private string destination; 
 
