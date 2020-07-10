@@ -11,6 +11,7 @@ using System.Reflection;
 using SSBackupClient;
 using System.ServiceProcess;
 using System.IO;
+using System.Threading;
 
 namespace SebsBackupClient
 {
@@ -266,7 +267,7 @@ namespace SebsBackupClient
             {
                 DirectoryInfo directory = new DirectoryInfo(System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + @"\Service\Log");
                 FileInfo myFile = (from f in directory.GetFiles() orderby f.LastWriteTime descending select f).First();
-                IEnumerable<string> allLines = File.ReadLines(myFile.FullName).Where(s => s.Contains("Success"));
+                IEnumerable<string> allLines = File.ReadLines(myFile.FullName).Where(s => s.Contains("Succes"));
                 if (allLines == null) //try every log file
                 {
                     IEnumerable<FileInfo> myFiles = (from f in directory.GetFiles() orderby f.LastWriteTime descending select f);
@@ -287,7 +288,7 @@ namespace SebsBackupClient
                     }
 
                 }
-                string lastBackupTimeMessage = allLines.Last();
+                string lastBackupTimeMessage = allLines.LastOrDefault();
                 ServiceLastBackupTime.Text = @"Last succesful backup was at: " + lastBackupTimeMessage.Substring(0, lastBackupTimeMessage.IndexOf("|"));
             }
             catch (Exception Ex)
@@ -799,9 +800,18 @@ namespace SebsBackupClient
             try
             {
                 ServiceController sc = new ServiceController("SSBackup");
+                if(sc.Status == ServiceControllerStatus.StartPending)
+                {
+                    sc.WaitForStatus(ServiceControllerStatus.Running);
+                }
+                if (sc.Status == ServiceControllerStatus.StopPending)
+                {
+                    sc.WaitForStatus(ServiceControllerStatus.Stopped); 
+                }
                 if(sc.Status == ServiceControllerStatus.Running)
                 {
                     sc.Stop();
+                    sc.WaitForStatus(ServiceControllerStatus.Stopped, TimeSpan.FromSeconds(2));
                     sc.Start(); 
                 }
                 else

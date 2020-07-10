@@ -1,4 +1,5 @@
 ﻿using System.Configuration.Install;
+using System.ServiceProcess;
 
 namespace SSBackup
 {
@@ -42,7 +43,7 @@ namespace SSBackup
             // 
             // serviceInstaller1
             // 
-            this.serviceInstaller1.Description = "SS Backup Service, should always be running for backups to occur.";
+            this.serviceInstaller1.Description = "SSBackup Service, should always be running for backups to occur.";
             this.serviceInstaller1.DisplayName = "SSBackup";
             this.serviceInstaller1.ServiceName = "SSBackup";
             this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
@@ -53,6 +54,7 @@ namespace SSBackup
             this.Installers.AddRange(new System.Configuration.Install.Installer[] {
             this.serviceProcessInstaller1,
             this.serviceInstaller1});
+
         }
 
         #endregion

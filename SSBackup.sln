@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SebsBackup", "SSBackup\Sebs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SebsBackupClient", "SSBackupClient\SebsBackupClient.csproj", "{3B92C4CB-2EC0-4582-A8B5-2395FE4C1C75}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SSBackupInstaller", "SSBackupInstaller\SSBackupInstaller.vdproj", "{E7DAB054-09E1-4B67-8558-2B8D5F714551}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SSBackup_Setup", "SSBackup_Setup\SSBackup_Setup.vdproj", "{A58B1955-0FC2-4FC4-AB8B-6A75E8AADF2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,9 +29,8 @@ Global
 		{3B92C4CB-2EC0-4582-A8B5-2395FE4C1C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B92C4CB-2EC0-4582-A8B5-2395FE4C1C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B92C4CB-2EC0-4582-A8B5-2395FE4C1C75}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E7DAB054-09E1-4B67-8558-2B8D5F714551}.Debug|Any CPU.ActiveCfg = Debug
-		{E7DAB054-09E1-4B67-8558-2B8D5F714551}.Debug|Any CPU.Build.0 = Debug
-		{E7DAB054-09E1-4B67-8558-2B8D5F714551}.Release|Any CPU.ActiveCfg = Release
+		{A58B1955-0FC2-4FC4-AB8B-6A75E8AADF2C}.Debug|Any CPU.ActiveCfg = Debug
+		{A58B1955-0FC2-4FC4-AB8B-6A75E8AADF2C}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
